@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+shoe_size_list = []
+total_money_earned = 0
+
+no_use = int(input())
+
+shoe_size_list = list(map(int, input().split()))
+for _ in range(int(input())):
+    size,rate = list(map(int, input().split()))
+    if size in shoe_size_list:
+        total_money_earned = total_money_earned + rate
+        shoe_size_list.remove(size)
+print(total_money_earned)
